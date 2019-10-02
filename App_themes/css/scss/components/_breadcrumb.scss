@@ -1,0 +1,48 @@
+.breadcrumbs {
+    padding: 1rem 0;
+    font-size: 1rem;
+
+    .cate {
+        font-size: 1.5em;
+        line-height: 1.25;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        &__sub {
+            white-space: nowrap;
+            padding-left: 0;
+            list-style-type: none;
+            overflow: auto;
+            margin-bottom: 0;
+
+            li {
+                font-size: 1em;
+                line-height: 1.25;
+                margin-right: 1px;
+                display: inline-block;
+
+                h1 {
+                    font-size: inherit;
+                    line-height: inherit;
+                    margin-bottom: 0;
+                }
+
+                a {
+                    display: block;
+                    transition: all 0.2s ease-in-out;
+                    padding: 0.5rem 1rem;
+                }
+
+                &.is-active,
+                &:hover {
+                    a {
+                        color: white;
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+[aria-expanded="false"] {
+    .short {
+        display: none;
+    }
+}
+
+[aria-expanded="true"] {
+    .full {
+        display: none;
+    }
+
+    .short {
+        display: block;
+    }
+}
+
+.modal.show .modal-dialog {
+    -webkit-transform: translate(0, 20%);
+    transform: translate(0, 20%);
+}
+
+.btn-cta {
+    border: 1px solid #fff;
+    padding: 0.5rem 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.2s ease-in-out;
+    width: 320px;
+    height: 4rem;
+    max-width: 100%;
+
+    @media (min-width: 768px) {}
+
+
+    .fal {
+        color: white;
+        line-height: 2.875rem;
+        width: 2.875rem;
+        text-align: center;
+        float: left;
+        margin-right: 0.5rem;
+        transition: all 0.2s ease-in-out;
+    }
+
+    span {
+        display: block;
+        line-height: 2.875rem;
+        text-transform: uppercase;
+        overflow: hidden;
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        border-color: #fff;
+        background-color: #fff;
+
+        .fal {
+            color: black;
+        }
+
+        span {
+            background-color: #000;
+            color: white;
+        }
+    }
+
+    &.black {
+        border-color: #000;
+
+        .fal {
+            color: #000;
+        }
+
+        span {
+            background-color: #000;
+            color: #fff;
+        }
+
+        &:hover {
+            border-color: #000;
+            background-color: #000;
+
+            .fal {
+                color: #fff;
+            }
+
+            span {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    &.black-sm {
+        @media (max-width: 767px) {
+
+            border-color: #000;
+
+            .fal {
+                color: #000;
+            }
+
+            span {
+                background-color: #000;
+                color: #fff;
+            }
+
+            &:hover {
+                border-color: #000;
+                background-color: #000;
+
+                .fal {
+                    color: #fff;
+                }
+
+                span {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.input-wrap {
+    position: relative;
+
+    .fal {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .form-control:not(textarea) {
+        padding-left: 4rem;
+    }
+}
+
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+    border-radius: 0;
+}
+
+h2,
+h3 {
+    &.title {
+        font-size: 1.5rem;
+        font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-weight: bold;
+    }
+}
+
+h2.title {
+    font-size: 2rem;
+}

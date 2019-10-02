@@ -1,0 +1,388 @@
+/* story global */
+.story {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+        box-sizing: border-box;
+    }
+
+    &__thumb {
+        margin-bottom: 1rem;
+
+        img {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &__header {}
+
+    &__title {
+        font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    &__summary,
+    &__meta {
+        opacity: 0.8;
+        margin-top: 1rem;
+    }
+
+    &:hover {
+        .story {
+            &__thumb {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &+.story {
+        margin-top: 2rem;
+    }
+
+    &--right {
+        .story {
+            &__thumb {
+                width: 120px;
+                float: right;
+                margin-left: 1rem;
+                margin-bottom: 0;
+            }
+
+            &__header {
+                overflow: hidden;
+            }
+        }
+    }
+
+    &--left {
+        .story {
+            &__thumb {
+                width: 30%;
+                float: left;
+                margin-right: 1rem;
+                margin-bottom: 0;
+                text-align: center;
+            }
+
+            &__header {
+                overflow: hidden;
+            }
+        }
+
+        &.cover {
+            .story {
+                &__thumb {
+                    width: 50%;
+                    margin-right: 2rem;
+                }
+
+                &__title {
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+    &--cover {
+        position: relative;
+
+        .story {
+            &__header {
+                @media (min-width: 768px) {
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
+                    max-width: 30%;
+                }
+
+                @media (min-width: 992px) {
+                    bottom: 4rem;
+                    left: 4rem;
+                }
+            }
+
+            &__title {
+                color: #000;
+                font-size: 1.5rem;
+                line-height: 1.4;
+
+                a {
+                    color: #000;
+
+                    &:hover {
+                        color: #555;
+                    }
+                }
+
+                b {
+                    font-size: 3rem;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                }
+
+                @media (min-width: 768px) {
+                    color: #fff;
+                    font-size: 1.5rem;
+
+                    a {
+                        color: #fff;
+
+                        &:hover {
+                            color: #d0d0d0;
+                        }
+                    }
+
+                    b {
+                        font-size: 3rem;
+                    }
+                }
+
+                @media (min-width: 992px) {
+                    font-size: 2rem;
+
+                    b {
+                        font-size: 4rem;
+                    }
+                }
+            }
+
+            &__summary {
+                color: #fff;
+            }
+        }
+
+        &.mask {
+            .story {
+                &__header {
+                    text-align: center;
+                }
+
+                &__summary {
+                    color: #000;
+                }
+
+                @media (min-width: 768px) {
+                    &__header {
+                        background-color: rgba(0, 0, 0, .5);
+                        padding: 1.5rem 2rem;
+                        max-width: 60%;
+                    }
+
+                    &__summary {
+                        font-size: 1.5rem;
+                        line-height: 1.3;
+                        max-height: 3.9em;
+                        overflow: hidden;
+                        color: #fff;
+                    }
+                }
+
+                @media (min-width: 992px) {
+                    &__header {
+                        max-width: 45%;
+                    }
+                }
+            }
+
+            &--white {
+                .story {
+                    &__header {
+                        position: relative;
+                        bottom: auto;
+
+                        text-align: center;
+                        background-color: #fff;
+                    }
+
+                    &__title {
+                        color: black;
+                        font-weight: bold;
+                    }
+
+                    &__summary {
+                        color: black;
+                        font-size: 1.125rem;
+                        line-height: 1.3;
+                    }
+
+                    @media (min-width: 768px) {
+                        &__header {
+                            max-width: 95%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            padding: 1.5rem 2rem;
+                        }
+
+                        &__summary {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    @media (min-width: 992px) {
+                        &__header {
+                            max-width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--mask {
+        position: relative;
+
+        .story {
+            &__thumb {
+                &::after {
+                    content: '';
+                    display: block;
+                    background-color: transparent;
+                    position: absolute;
+                    top: 0.5rem;
+                    bottom: 0.5rem;
+                    right: 0.5rem;
+                    left: 0.5rem;
+                    border: 1px solid #fff;
+                    opacity: 0;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                a {
+                    display: block;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        background-color: rgba(0, 0, 0, .4);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: all 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            &__header {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+
+            &__title {
+                text-align: center;
+
+                a {
+                    color: #fff;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+
+            .story__thumb::after,
+            .story__thumb a::after,
+            .story__header {
+                opacity: 1;
+            }
+        }
+    }
+
+    .zone--slider & {
+        .story {
+            &__thumb {
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+        }
+
+        &+.story {
+            margin-top: 0;
+        }
+    }
+}
+
+.collection {
+    &__featured {
+        margin-bottom: 5rem;
+
+        .row {
+            position: relative;
+        }
+
+        .column {
+            width: 42%;
+
+            &.order-last {
+                margin-left: 16%;
+            }
+        }
+
+        .collection__title {
+            position: absolute;
+            width: 75%;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            line-height: 2;
+
+            span {
+                padding: 0 1rem;
+                background: rgba(0, 0, 0, 0.5);
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
+            }
+
+            @media (min-width: 768px) {
+                width: 45%;
+            }
+
+            @media (min-width: 992px) {
+                width: 33.33%;
+            }
+        }
+    }
+
+    &__spotlight {
+        margin-bottom: 5rem;
+    }
+
+    &__title {
+        font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+
+        @media (min-width: 576px) {
+            font-size: 1.5rem;
+
+        }
+
+        @media (min-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__image {
+        border: 1px solid #000;
+    }
+}

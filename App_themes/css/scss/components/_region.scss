@@ -1,0 +1,229 @@
+/* zone style */
+.zone {
+    margin-bottom: 5rem;
+
+    &__header {
+        margin-bottom: 2.5rem;
+    }
+
+    &__title {
+        font-size: 1.875rem;
+        font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0;
+
+        @media (min-width: 768px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &--slider {
+        .slider-control {
+            .selector {
+                position: absolute;
+
+                .bx-prev,
+                .bx-next {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &:hover {
+                    .fal {
+                        opacity: 1;
+                    }
+                }
+
+                .fal {
+                    transition: all 0.2s ease-in-out;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &.horizontal {
+            .zone__content {
+                position: relative;
+                padding: 0 2rem;
+            }
+
+            .slider-control {
+                .selector {
+                    width: 1.5rem;
+                    height: 2rem;
+                    text-align: center;
+                    transform: translateY(-50%);
+
+                    .fal {
+                        font-size: 2rem;
+                    }
+
+                    &.slider-prev {
+                        top: 50%;
+                        left: 0;
+                    }
+
+                    &.slider-next {
+                        top: 50%;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &.full {
+            .slider-control {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .selector {
+                display: inline-block;
+                position: relative;
+                top: 2px;
+
+                .fal {
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .slider-pager {
+                display: inline-block;
+
+                .bx-pager {
+                    &-item {
+                        display: inline-block;
+                    }
+
+                    &-link {
+                        text-indent: -9999em;
+                        display: inline-block;
+                        width: 1rem;
+                        height: 1rem;
+                        line-height: 1.5rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        background-color: #fff;
+                        border: 1px solid #000;
+                        margin: 0 0.5rem;
+
+                        &.active {
+                            background-color: #000;
+                        }
+                    }
+                }
+            }
+        }
+
+        .story {
+            &--left {
+                @media (max-width: 767px) {
+                    .story {
+                        &__thumb {
+                            width: 100%;
+                            float: none;
+                        }
+
+                        &__header {
+                            max-width: initial !important;
+                            text-align: center;
+                            margin-top: 1rem;
+                        }
+
+                        &__summary {
+                            max-height: 3.9em;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--grey {
+
+        .zone {
+            &__content {
+                padding: 2.5rem 1rem;
+                background: url('../images/asset.png') right 5% center no-repeat #f0f0f0;
+                background-size: 456px 380px;
+
+                .story {
+                    &__thumb {}
+
+                    &__header {
+                        max-width: 50%;
+                    }
+
+                    &__title {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    &__summary {
+                        font-size: 1.5rem;
+                        line-height: 1.3em;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &--cover {
+        .story {
+            &--left {
+                @media (max-width: 767px) {
+                    .story {
+                        &__thumb {
+                            width: 100% !important;
+                            float: none;
+                        }
+
+                        &__header {
+                            max-width: initial !important;
+                            text-align: center;
+                            margin-top: 1rem;
+                        }
+
+                        &__summary {
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .client {
+        text-align: center;
+        font-size: 0;
+
+        .card {
+            padding-bottom: 20%;
+            position: relative;
+            width: 20%;
+            display: inline-block;
+
+            &+.card {
+                margin-left: 5%;
+            }
+
+            .img-fluid {
+                width: 75%;
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

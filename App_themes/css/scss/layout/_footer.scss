@@ -1,0 +1,57 @@
+.site-footer {
+    color: white;
+    margin-bottom: 2rem;
+
+    .container {}
+
+    .wrap {
+        padding: 2rem;
+        background-color: #202020;
+    }
+
+    .title {
+        font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-size: 1.5rem;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        max-width: 18rem;
+    }
+
+    .map {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+
+        .fal {
+            margin-right: 0.5rem;
+        }
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .nav {
+        margin-top: 1rem;
+
+        &-item {
+            &+.nav-item {
+                border-top: 1px solid #545454;
+            }
+        }
+
+        &-link {
+            padding: 1rem 0px;
+        }
+    }
+}
