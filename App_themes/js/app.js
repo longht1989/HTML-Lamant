@@ -15,6 +15,10 @@ $(function() {
         isDesktop = true;
     }
 
+    // make parent class for vidoe & image story
+    $('.story__thumb img[src$=".gif"]').parents('.story').addClass('story--gif');
+    $('.story__thumb video').parents('.story').addClass('story--video');
+
     /*pin header */
     window.onscroll = function() { windowScroll() };
 
@@ -133,6 +137,11 @@ if ($(".lightgallery").length > 0) {
 // masonry
 var $grid = $('.grid-wrap');
 if ($(".grid-wrap").length > 0) {
+
+    // make parent class for vidoe & image story
+    $('.story__thumb img[src$=".gif"]').parents('.story').addClass('story--gif');
+    $('.story__thumb video').parents('.story').addClass('story--video');
+
     $grid.masonry({
         // options
         columnWidth: '.item-sizer',
