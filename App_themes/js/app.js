@@ -150,4 +150,16 @@ if ($(".grid-wrap").length > 0) {
         percentPosition: true,
         transitionDuration: '0.2s'
     });
+    $('#viewmore').on('click', viewmoreClick);
+}
+
+function viewmoreClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    // create new item elements
+    var $items = $('<article class="story grid-item story--video"> <figure class="story__thumb"><a href="03.1-service-detail.html"> <video muted playsinline autoplay loop> <source src="images/video.mp4" type="video/mp4"> Your browser does not support the video tag. </video></a> </figure> <div class="story__header"> <h3 class="story__title"><a href="#">Muốn thuê được chiếc váy </a></h3> </div> </article> <article class="story grid-item story--gif"> <figure class="story__thumb"><a href="#"><img src="images/gif.gif" alt="" class="img-fluid"></a></figure> <div class="story__header"> <h3 class="story__title"><a href="#">Muốn thuê được chiếc váy </a></h3> </div> </article> <article class="story grid-item"> <figure class="story__thumb"><a href="#"><img src="images/640x360-1.jpg" alt="" class="img-fluid"></a></figure> <div class="story__header"> <h3 class="story__title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque vel, cum. Nam facilis hic asperiores nemo, aliquid obcaecati, alias similique?</a></h3> </div> </article><article class="story grid-item story--video"> <figure class="story__thumb"><a href="03.1-service-detail.html"> <video muted playsinline autoplay loop> <source src="images/video43.mp4" type="video/mp4"> Your browser does not support the video tag. </video></a> </figure> <div class="story__header"> <h3 class="story__title"><a href="#">Muốn thuê được chiếc váy </a></h3> </div> </article>');
+    // append items to grid
+    $grid.append($items)
+        // add and lay out newly appended items
+        .masonry('appended', $items);
 }
