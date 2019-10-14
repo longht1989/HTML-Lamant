@@ -55,7 +55,7 @@
             max-width: 80%;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 1440px) {
             max-width: 66.66%;
         }
 
@@ -79,8 +79,10 @@
 
         .content-image,
         .image-wrap {
-            margin: 0rem -1.5rem 1rem;
+            margin: 0rem auto 1rem;
             position: relative;
+            width: initial;
+            max-width: initial;
 
             img {
                 display: block;

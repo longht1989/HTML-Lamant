@@ -73,7 +73,6 @@
             margin-right: 1px;
 
             &>.nav-link {
-                letter-spacing: 2px;
                 padding: 0.5rem 1rem;
 
                 @media (min-width: 992px) {
@@ -112,6 +111,7 @@
             padding-left: 0;
             list-style: none;
             background: #000;
+            z-index: 2;
 
             .nav-link {
                 color: white;
@@ -214,6 +214,25 @@
                         }
                     }
                 }
+            }
+
+            .nav-link {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+
+        @media (min-width:1024px) {
+            .nav-link {
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .nav-link {
+                letter-spacing: 2px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
         }
     }
