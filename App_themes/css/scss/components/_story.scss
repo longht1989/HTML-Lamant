@@ -354,6 +354,18 @@
         }
     }
 
+    &--circle {
+        &:hover {
+            .story {
+                &__thumb {
+                    img {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+
     .zone--slider & {
         .story {
             &__thumb {
