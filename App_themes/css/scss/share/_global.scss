@@ -48,6 +48,17 @@
         overflow: hidden;
         background-color: #fff;
         transition: all 0.2s ease-in-out;
+
+        .fal {
+            color: black;
+            float: none;
+            width: 2rem;
+        }
+
+        em {
+            display: inline-block;
+            font-style: normal;
+        }
     }
 
     &:hover {
@@ -61,6 +72,10 @@
         span {
             background-color: #000;
             color: white;
+
+            .fal {
+                color: white;
+            }
         }
     }
 
@@ -103,6 +118,10 @@
             span {
                 background-color: #000;
                 color: #fff;
+
+                .fal {
+                    color: #fff;
+                }
             }
 
             &:hover {
@@ -116,6 +135,52 @@
                 span {
                     background-color: #fff;
                     color: #000;
+
+                    .fal {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    &-short {
+        width: 150px;
+        font-size: 0.875rem;
+        letter-spacing: -0.5px;
+        height: 3.25rem;
+
+        .fal,
+        span {
+            line-height: 2.15rem;
+        }
+
+        @media (max-width: 767px) {}
+    }
+
+    &-outline {
+        span {
+            background: transparent;
+            color: white;
+
+            .fal {
+                color: white;
+            }
+        }
+
+        @media (max-width: 767px) {
+            span {
+                background: transparent !important;
+                color: black !important;
+
+                .fal {
+                    color: black !important;
+                }
+            }
+
+            &:hover {
+                span,.fal {
+                    color: white !important;
                 }
             }
         }
