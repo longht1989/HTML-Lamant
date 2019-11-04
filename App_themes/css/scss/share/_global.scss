@@ -145,10 +145,11 @@
     }
 
     &-short {
-        width: 150px;
+        width: 135px;
         font-size: 0.875rem;
         letter-spacing: -0.5px;
-        height: 3.25rem;
+        height: 2.75rem;
+        padding: 0.25rem;
 
         .fal,
         span {
@@ -179,7 +180,9 @@
             }
 
             &:hover {
-                span,.fal {
+
+                span,
+                .fal {
                     color: white !important;
                 }
             }
