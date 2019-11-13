@@ -271,9 +271,11 @@
             &::first-letter {
                 font-weight: bold;
                 text-transform: uppercase;
-                color: $blue;
+                color: black;
+                font-family: 'UTM Centur', "Times New Roman", Times, Baskerville, Georgia, serif;
                 font-size: 5.4rem;
-                line-height: 4.2rem;
+                line-height: 5rem;
+                margin-bottom: 0.5rem;
                 padding-right: 8px;
                 float: left;
                 vertical-align: top;
@@ -489,9 +491,6 @@
         }
 
         .story--left {
-            padding-top: 2rem;
-            border-top: 1px solid #dbdbdb;
-
             .fal {
                 right: 0;
             }
@@ -501,6 +500,11 @@
             .story__header {
                 float: right;
             }
+        }
+
+        .story+.story {
+            padding-top: 2rem;
+            border-top: 1px solid #dbdbdb;
         }
     }
 }
